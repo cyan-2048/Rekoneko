@@ -1,0 +1,41 @@
+{
+  "version": "0.0.1",
+  "name": "Rekoneko",
+  "description": "Open-Source client for Reddit",
+  "launch_path": "/index.html",
+  "icons": {
+    "56": "/css/56px.png",
+    "112": "/css/112px.png"
+  },
+  "developer": {
+    "name": "Cyan",
+    "url": "https://github.com/cyan-2048/Rekoneko"
+  },
+  "origin": "app://rekoneko.cyankindasus.com",
+  "type": "privileged",
+  "permissions": {
+    "systemXHR": { "description": "Required to access Reddit's Server" },
+    "video-capture": { "description": "Reading Codes using the Camera" },
+    "desktop-notification": {},
+    "alarms": { "description": "check stuff in the background" },
+    "serviceworker": {
+      "description": "Offline usage and notifications"
+    }
+  },
+  "messages": [{ "alarm": "/index.html" }],
+  "redirects": [
+    {
+      "from": "https://cyan.2048.reddit.kaios-oauth/auth0",
+      "to": "/redirect/oauth/index.html"
+    }
+  ],
+  "installs_allowed_from": ["*"],
+  "locales": {
+    "en-US": {
+      "name": "Rekoneko",
+      "subtitle": "a client for reddit",
+      "description": "Open-Source client for Reddit, written in Svelte."
+    }
+  },
+  "default_locale": "en"
+}
