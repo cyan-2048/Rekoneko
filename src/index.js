@@ -56,9 +56,7 @@ define("async", (generator, __arguments = null, __this = this) => {
   });
 });
 
-define("oauth", function () {
-  const detail = Object.fromEntries(new URLSearchParams(location.toString().split("?")[1]).entries());
-  window.dispatchEvent(new CustomEvent("oauth", { detail }));
-});
-
 define("Reddit", Reddit);
+
+const callback = document.querySelector("head meta[name='callback']")?.content;
+if (callback) require(callback)();

@@ -1,4 +1,6 @@
 // yes very cheap implementation, all of the other options seems BS
+
+// for global variables on workerscope and browserscope
 var require, define;
 
 (() => {

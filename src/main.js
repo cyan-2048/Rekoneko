@@ -1,6 +1,11 @@
 import App from "./App.svelte";
+import alarm from "./lib/alarm";
 
 export default (async function () {
+  PRODUCTION && alarm();
+
+  if (document.visibilityState !== "visible") return;
+
   new App({ target: document.body });
 
   if (PRODUCTION) {

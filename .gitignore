@@ -1,6 +1,8 @@
 /node_modules/
 /public/build/
+private/
 dev/
 dist/
+src/lib/config.json
 
 .DS_Store

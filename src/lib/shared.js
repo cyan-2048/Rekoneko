@@ -37,14 +37,23 @@ function writableLF(name, defaultValue, checkUpdate = false, instance = null) {
   return { ..._writable, init };
 }
 
-const randomNum = Math.floor(Math.random() * 69420);
-
 export const settings = writableLF(
   "settings",
   {
     notification_interval: 1,
     show_notifications: true,
-    hash: hashCode(navigator.userAgent) + hashCode(randomNum),
+    last_token: null,
+    refresh_token: null,
+    hash: generateHash(),
+    devmode: !PRODUCTION,
   },
   true
 );
+
+function generateHash(returnHash = false) {
+  return hashCode(navigator.userAgent) + hashCode(Math.floor(Math.random() * 69420));
+}
+
+export function resetTokens() {
+  settings.update((obj) => ({ ...obj, refresh_token: null, last_token: null, hash: generateHash() }));
+}

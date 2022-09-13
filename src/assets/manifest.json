@@ -4,8 +4,8 @@
   "description": "Open-Source client for Reddit",
   "launch_path": "/index.html",
   "icons": {
-    "56": "/css/56px.png",
-    "112": "/css/112px.png"
+    "56": "/icons/56px.png",
+    "112": "/icons/112px.png"
   },
   "developer": {
     "name": "Cyan",
