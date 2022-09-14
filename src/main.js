@@ -7,7 +7,7 @@ export default (async function () {
   if (document.visibilityState !== "visible") return;
 
   new App({ target: document.body });
-
+  /*
   if (PRODUCTION) {
     const notif = new Notification("title", {
       tag: "playback",
@@ -24,4 +24,5 @@ export default (async function () {
       notif.close();
     };
   }
+  */
 });
